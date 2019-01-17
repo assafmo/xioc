@@ -183,183 +183,185 @@
     "emails": [],
     "ip4s": []
   },
-  "": {
+  "1.1.1.1000": {
     "domains": [],
     "urls": [],
     "emails": [],
     "ip4s": []
   },
-  "": {
+  "192[DOT]95[DOT]42[DOT]205": {
+    "domains": [],
+    "urls": [],
+    "emails": [],
+    "ip4s": ["192.95.42.205"]
+  },
+  "a@1.1.1.1": {
+    "domains": [],
+    "urls": [],
+    "emails": [],
+    "ip4s": ["1.1.1.1"]
+  },
+  "a@com": {
     "domains": [],
     "urls": [],
     "emails": [],
     "ip4s": []
   },
-  "": {
+  "a..a@a.com": {
+    "domains": ["a.com"],
+    "urls": [],
+    "emails": [],
+    "ip4s": []
+  },
+  "a+a@a.com": {
+    "domains": ["a.com"],
+    "urls": [],
+    "emails": ["a+a@a.com"],
+    "ip4s": []
+  },
+  "t$……j@h.0": {
     "domains": [],
     "urls": [],
     "emails": [],
     "ip4s": []
   },
-  "": {
-    "domains": [],
+  "beta[at]zimperium[dot]com": {
+    "domains": ["zimperium.com"],
+    "urls": [],
+    "emails": ["beta@zimperium.com"],
+    "ip4s": []
+  },
+  "epiclesis[at]protonmail.ch": {
+    "domains": ["protonmail.ch"],
+    "urls": [],
+    "emails": ["epiclesis@protonmail.ch"],
+    "ip4s": []
+  },
+  "certbot failed at 0day[dot]rocks?": {
+    "domains": ["0day.rocks"],
+    "urls": [],
+    "emails": ["failed@0day.rocks"],
+    "ip4s": []
+  },
+  "tool!medium.com/@vysec.private…": {
+    "domains": ["medium.com"],
     "urls": [],
     "emails": [],
     "ip4s": []
   },
-  "": {
-    "domains": [],
+  "ilya-soro*****12@mail.ru, v*****re@gmail.com,": {
+    "domains": ["mail.ru", "gmail.com"],
+    "urls": [],
+    "emails": ["ilya-soro*****12@mail.ru", "v*****re@gmail.com"],
+    "ip4s": []
+  },
+  "x0rz+stickers@0day[.]rocks)": {
+    "domains": ["0day.rocks"],
+    "urls": [],
+    "emails": ["x0rz+stickers@0day.rocks"],
+    "ip4s": []
+  },
+  "http://www.eset.eu/encyclopaedia/win32dursg-a-p2p-worm-agent-aak-w32-sillyp2p-trojan-c?lng=en": {
+    "domains": ["www.eset.eu"],
+    "urls": [
+      "http://www.eset.eu/encyclopaedia/win32dursg-a-p2p-worm-agent-aak-w32-sillyp2p-trojan-c?lng=en"
+    ],
+    "emails": [],
+    "ip4s": []
+  },
+  "(http://blogs.pcmag.com/securitywatch/2010/02/sw_tests_show_prob": {
+    "domains": ["blogs.pcmag.com"],
+    "urls": ["http://blogs.pcmag.com/securitywatch/2010/02/sw_tests_show_prob"],
+    "emails": [],
+    "ip4s": []
+  },
+  "https://twitter.com/Nrg8000/status/957318498102865920": {
+    "domains": ["twitter.com"],
+    "urls": ["https://twitter.com/Nrg8000/status/957318498102865920"],
+    "emails": [],
+    "ip4s": []
+  },
+  "http://en.wikipedia.org/wiki/Lynx_%28web_browser%29": {
+    "domains": ["en.wikipedia.org"],
+    "urls": ["http://en.wikipedia.org/wiki/Lynx_%28web_browser%29"],
+    "emails": [],
+    "ip4s": []
+  },
+  "ftp://alpha[.]gnu.org/gnu/emacs/pretest/emacs-25[dot]0.90.tar.xz": {
+    "domains": ["alpha.gnu.org"],
+    "urls": ["ftp://alpha.gnu.org/gnu/emacs/pretest/emacs-25.0.90.tar.xz"],
+    "emails": [],
+    "ip4s": []
+  },
+  "hxxp://www.easy-home-sales[.]co.za//db_template.php": {
+    "domains": ["www.easy-home-sales.co.za"],
+    "urls": ["http://www.easy-home-sales.co.za//db_template.php"],
+    "emails": [],
+    "ip4s": []
+  },
+  "send email to sales AT zimperium dot com": {
+    "domains": ["zimperium.com"],
+    "urls": [],
+    "emails": ["sales@zimperium.com"],
+    "ip4s": []
+  },
+  "unicode fi => veriﬁedaccounts(dot)byethost9(dot)com/go(dot)html": {
+    "domains": ["veriﬁedaccounts.byethost9.com"],
     "urls": [],
     "emails": [],
     "ip4s": []
   },
-  "": {
-    "domains": [],
+  "URL: big-product[DOT]info -> bigproducts[DOT]info/campaigns/rockyiphone/rockyiphone[DOT]php": {
+    "domains": ["big-product.info", "bigproducts.info"],
     "urls": [],
     "emails": [],
     "ip4s": []
   },
-  "": {
-    "domains": [],
-    "urls": [],
+  "https://www.youtube(dot)com/watch?v=r56baR7zSpU": {
+    "domains": ["www.youtube.com"],
+    "urls": ["https://www.youtube.com/watch?v=r56baR7zSpU"],
     "emails": [],
     "ip4s": []
   },
-  "": {
-    "domains": [],
+  "contact(at)malwaretech(dot)com ": {
+    "domains": ["malwaretech.com"],
     "urls": [],
+    "emails": ["contact@malwaretech.com"],
+    "ip4s": []
+  },
+  "https://a:b@c.com/index.html": {
+    "domains": ["c.com"],
+    "urls": ["https://a:b@c.com/index.html"],
     "emails": [],
     "ip4s": []
   },
-  "": {
+  " root@192.168(.)11.1 ": {
     "domains": [],
     "urls": [],
     "emails": [],
-    "ip4s": []
+    "ip4s": ["192.168.11.1"]
   },
-  "": {
-    "domains": [],
-    "urls": [],
+  "h__p://m103.pay2earn[.]net/devices": {
+    "domains": ["m103.pay2earn.net"],
+    "urls": ["http://m103.pay2earn.net/devices"],
     "emails": [],
     "ip4s": []
   },
-  "": {
+  "http[:]//118.184.48[.]95:8000/info.vbs": {
     "domains": [],
-    "urls": [],
+    "urls": ["http://118.184.48.95:8000/info.vbs"],
+    "emails": [],
+    "ip4s": ["118.184.48.95"]
+  },
+  "http://fpw.[com].my/zy": {
+    "domains": ["fpw.com.my"],
+    "urls": ["http://fpw.com.my/zy"],
     "emails": [],
     "ip4s": []
   },
-  "": {
-    "domains": [],
-    "urls": [],
-    "emails": [],
-    "ip4s": []
-  },
-  "": {
-    "domains": [],
-    "urls": [],
-    "emails": [],
-    "ip4s": []
-  },
-  "": {
-    "domains": [],
-    "urls": [],
-    "emails": [],
-    "ip4s": []
-  },
-  "": {
-    "domains": [],
-    "urls": [],
-    "emails": [],
-    "ip4s": []
-  },
-  "": {
-    "domains": [],
-    "urls": [],
-    "emails": [],
-    "ip4s": []
-  },
-  "": {
-    "domains": [],
-    "urls": [],
-    "emails": [],
-    "ip4s": []
-  },
-  "": {
-    "domains": [],
-    "urls": [],
-    "emails": [],
-    "ip4s": []
-  },
-  "": {
-    "domains": [],
-    "urls": [],
-    "emails": [],
-    "ip4s": []
-  },
-  "": {
-    "domains": [],
-    "urls": [],
-    "emails": [],
-    "ip4s": []
-  },
-  "": {
-    "domains": [],
-    "urls": [],
-    "emails": [],
-    "ip4s": []
-  },
-  "": {
-    "domains": [],
-    "urls": [],
-    "emails": [],
-    "ip4s": []
-  },
-  "": {
-    "domains": [],
-    "urls": [],
-    "emails": [],
-    "ip4s": []
-  },
-  "": {
-    "domains": [],
-    "urls": [],
-    "emails": [],
-    "ip4s": []
-  },
-  "": {
-    "domains": [],
-    "urls": [],
-    "emails": [],
-    "ip4s": []
-  },
-  "": {
-    "domains": [],
-    "urls": [],
-    "emails": [],
-    "ip4s": []
-  },
-  "": {
-    "domains": [],
-    "urls": [],
-    "emails": [],
-    "ip4s": []
-  },
-  "": {
-    "domains": [],
-    "urls": [],
-    "emails": [],
-    "ip4s": []
-  },
-  "": {
-    "domains": [],
-    "urls": [],
-    "emails": [],
-    "ip4s": []
-  },
-  "": {
-    "domains": [],
-    "urls": [],
+  "hXXp://playback.savefrom.biz/video/video1.cab": {
+    "domains": ["playback.savefrom.biz", "video1.cab"],
+    "urls": ["http://playback.savefrom.biz/video/video1.cab"],
     "emails": [],
     "ip4s": []
   },

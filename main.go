@@ -56,7 +56,7 @@ var at = `(@| at |\(at\)|\[at\]|\(@\)|\[@\])`
 var atRegex = regexp.MustCompile(`(?i)` + at)
 
 func replaceAt(s string) string {
-	return atRegex.ReplaceAllString(s, ".")
+	return atRegex.ReplaceAllString(s, "@")
 }
 
 func filterOnlyValidIPs(ips []string) []string {
@@ -136,7 +136,7 @@ func ExtractEmails(text string) []string {
 	return result
 }
 
-var urlRegex = regexp.MustCompile(`(?i)(h..ps?|ftp)://\S+`)
+var urlRegex = regexp.MustCompile(`(?i)(h..ps?|ftp)\[?:\]?//\S+`)
 
 func ExtractURLs(text string) []string {
 	urls := urlRegex.FindAllString(text, -1)
@@ -150,6 +150,8 @@ func ExtractURLs(text string) []string {
 		u = strings.Replace(u, "hXXp", "http", -1)
 		u = strings.Replace(u, "h__p", "http", -1)
 		u = strings.Replace(u, "h**p", "http", -1)
+		u = strings.Replace(u, "http[:]//", "http://", -1)
+		u = strings.Replace(u, "https[:]//", "https://", -1)
 		u = strings.Replace(u, "[com]", "com", -1)
 
 		parsedUrl, err := url.Parse(u)
