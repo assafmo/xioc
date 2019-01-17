@@ -1,6 +1,6 @@
 # xioc
 
-Extract domains, ips, urls, emails, md5s, sha1s, sha256s and sha512s from text.
+Extract domains, ips, urls, emails, md5, sha1 and sha256 from text.
 
 ## Installation
 

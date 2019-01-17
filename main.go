@@ -12,6 +12,19 @@ import (
 	"strings"
 )
 
+type extractFunction func(text string) []string
+
+var functions = map[string]extractFunction{
+	"domain": ExtractDomains,
+	"email":  ExtractEmails,
+	"ip4":    ExtractIPv4s,
+	"ip6":    ExtractIPv6s,
+	"url":    ExtractURLs,
+	"md5":    ExtractMD5s,
+	"sha1":   ExtractSHA1s,
+	"sha256": ExtractSHA256s,
+}
+
 func init() {
 }
 
@@ -19,20 +32,10 @@ func main() {
 	scanner := bufio.NewScanner(os.Stdin)
 	for scanner.Scan() {
 		text := scanner.Text()
-		for _, f := range []ExtractFunction{
-			ExtractDomains,
-			ExtractEmails,
-			ExtractIPv4s,
-			ExtractIPv6s,
-			ExtractURLs,
-			ExtractMD5s,
-			ExtractSHA1s,
-			ExtractSHA256s,
-			ExtractSHA512s,
-		} {
-			result := f(text)
-			if len(result) > 0 {
-				fmt.Println(result)
+		for iocType, f := range functions {
+			results := f(text)
+			for _, ioc := range results {
+				fmt.Printf("%s\t%s\n", iocType, ioc)
 			}
 		}
 
@@ -42,8 +45,6 @@ func main() {
 		log.Println(err)
 	}
 }
-
-type ExtractFunction func(text string) []string
 
 var dot = `(\.| dot |\(dot\)|\[dot\]|\(\.\)|\[\.\])`
 var dotRegex = regexp.MustCompile(`(?i)` + dot)
@@ -83,6 +84,7 @@ func filterOnlyValidIPs(ips []string) []string {
 
 var ip4Regex = regexp.MustCompile(`(?i)([0-9]|` + dot + `)+`)
 
+// ExtractIPv4s extracts IPv4 addresses from an input string
 func ExtractIPv4s(text string) []string {
 	ips := ip4Regex.FindAllString(text, -1)
 	return filterOnlyValidIPs(ips)
@@ -90,6 +92,7 @@ func ExtractIPv4s(text string) []string {
 
 var ip6Regex = regexp.MustCompile(`(?i)[a-f0-9:]+`)
 
+// ExtractIPv6s extracts IPv6 addresses from an input string
 func ExtractIPv6s(text string) []string {
 	ips := ip6Regex.FindAllString(text, -1)
 	return filterOnlyValidIPs(ips)
@@ -102,6 +105,7 @@ func hasKnownTLD(input string) bool {
 
 var emailRegex = regexp.MustCompile(`(?i)\b\S+?` + at + `\S+?` + dot + `\S+\b`)
 
+// ExtractEmails extracts email addresses from an input string
 func ExtractEmails(text string) []string {
 	emails := emailRegex.FindAllString(text, -1)
 
@@ -141,6 +145,7 @@ func ExtractEmails(text string) []string {
 
 var urlRegex = regexp.MustCompile(`(?i)(h..ps?|ftp)\[?:\]?//\S+`)
 
+// ExtractURLs extracts ftp and http addresses from an input string
 func ExtractURLs(text string) []string {
 	urls := urlRegex.FindAllString(text, -1)
 
@@ -157,12 +162,11 @@ func ExtractURLs(text string) []string {
 		u = strings.Replace(u, "https[:]//", "https://", -1)
 		u = strings.Replace(u, "[com]", "com", -1)
 
-		parsedUrl, err := url.Parse(u)
+		parsedURL, err := url.Parse(u)
 		if err != nil {
 			continue
 		}
-
-		u = parsedUrl.String()
+		u = parsedURL.String()
 
 		if !resultSet[u] {
 			resultSet[u] = true
@@ -176,17 +180,17 @@ func ExtractURLs(text string) []string {
 
 var domainRegex = regexp.MustCompile(`(?i)([\p{L}\p{N}][\p{L}\p{N}\-]*` + dot + `)+[a-z]{2,}`)
 
+// ExtractDomains extracts domain names from an input string
 func ExtractDomains(text string) []string {
 	domains := []string{}
 
 	urls := ExtractURLs(text)
 	for _, u := range urls {
-		parsedUrl, err := url.Parse(u)
+		parsedURL, err := url.Parse(u)
 		if err != nil {
 			continue
 		}
-
-		domains = append(domains, parsedUrl.Hostname())
+		domains = append(domains, parsedURL.Hostname())
 	}
 
 	emails := ExtractEmails(text)
@@ -239,20 +243,18 @@ func ExtractDomains(text string) []string {
 var md5Regex = regexp.MustCompile(`(?i)\b[a-f0-9]{32}\b`)
 var sha1Regex = regexp.MustCompile(`(?i)\b[a-f0-9]{40}\b`)
 var sha256Regex = regexp.MustCompile(`(?i)\b[a-f0-9]{64}\b`)
-var sha512Regex = regexp.MustCompile(`(?i)\b[a-f0-9]{128}\b`)
 
+// ExtractMD5s extracts md5 hex strings from an input string
 func ExtractMD5s(text string) []string {
 	return md5Regex.FindAllString(text, -1)
 }
 
+// ExtractSHA1s extracts sha1 hex strings from an input string
 func ExtractSHA1s(text string) []string {
 	return sha1Regex.FindAllString(text, -1)
 }
 
+// ExtractSHA256s extracts sha256 hex strings from an input string
 func ExtractSHA256s(text string) []string {
 	return sha256Regex.FindAllString(text, -1)
-}
-
-func ExtractSHA512s(text string) []string {
-	return sha512Regex.FindAllString(text, -1)
 }
