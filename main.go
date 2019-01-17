@@ -123,7 +123,10 @@ func ExtractEmails(text string) []string {
 			continue
 		}
 
-		if !hasKnownTLD(email) {
+		domain := strings.Split(email, "@")[1]
+		isIP := len(filterOnlyValidIPs([]string{domain})) == 1
+
+		if !hasKnownTLD(email) && !isIP {
 			continue
 		}
 

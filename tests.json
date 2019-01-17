@@ -198,7 +198,7 @@
   "a@1.1.1.1": {
     "domains": [],
     "urls": [],
-    "emails": [],
+    "emails": ["a@1.1.1.1"],
     "ip4s": ["1.1.1.1"]
   },
   "a@com": {
@@ -338,7 +338,7 @@
   " root@192.168(.)11.1 ": {
     "domains": [],
     "urls": [],
-    "emails": [],
+    "emails": ["root@192.168.11.1"],
     "ip4s": ["192.168.11.1"]
   },
   "h__p://m103.pay2earn[.]net/devices": {
@@ -363,6 +363,78 @@
     "domains": ["playback.savefrom.biz", "video1.cab"],
     "urls": ["http://playback.savefrom.biz/video/video1.cab"],
     "emails": [],
+    "ip4s": []
+  },
+  "email@example.com": {
+    "emails": ["email@example.com"],
+    "domains": ["example.com"],
+    "urls": [],
+    "ip4s": []
+  },
+  "firstname.lastname@example.com": {
+    "emails": ["firstname.lastname@example.com"],
+    "domains": ["example.com"],
+    "urls": [],
+    "ip4s": []
+  },
+  "email@subdomain.example.com": {
+    "emails": ["email@subdomain.example.com"],
+    "domains": ["subdomain.example.com"],
+    "urls": [],
+    "ip4s": []
+  },
+  "firstname+lastname@example.com": {
+    "emails": ["firstname+lastname@example.com"],
+    "domains": ["example.com"],
+    "urls": [],
+    "ip4s": []
+  },
+  "email@123.123.123.123": {
+    "emails": ["email@123.123.123.123"],
+    "domains": [],
+    "urls": [],
+    "ip4s": ["123.123.123.123"]
+  },
+  "1234567890@example.com": {
+    "emails": ["1234567890@example.com"],
+    "domains": ["example.com"],
+    "urls": [],
+    "ip4s": []
+  },
+  "email@example-one.com": {
+    "emails": ["email@example-one.com"],
+    "domains": ["example-one.com"],
+    "urls": [],
+    "ip4s": []
+  },
+  "_______@example.com": {
+    "emails": ["_______@example.com"],
+    "domains": ["example.com"],
+    "urls": [],
+    "ip4s": []
+  },
+  "email@example.name": {
+    "emails": ["email@example.name"],
+    "domains": ["example.name"],
+    "urls": [],
+    "ip4s": []
+  },
+  "email@example.museum": {
+    "emails": ["email@example.museum"],
+    "domains": ["example.museum"],
+    "urls": [],
+    "ip4s": []
+  },
+  "email@example.co.jp": {
+    "emails": ["email@example.co.jp"],
+    "domains": ["example.co.jp"],
+    "urls": [],
+    "ip4s": []
+  },
+  "firstname-lastname@example.com": {
+    "emails": ["firstname-lastname@example.com"],
+    "domains": ["example.com"],
+    "urls": [],
     "ip4s": []
   },
   "": {
