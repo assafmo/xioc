@@ -10,6 +10,8 @@ import (
 	"os"
 	"regexp"
 	"strings"
+
+	"golang.org/x/net/idna"
 )
 
 type extractFunction func(text string) []string
@@ -26,6 +28,15 @@ var functions = map[string]extractFunction{
 }
 
 func init() {
+	for tld := range knownTLDs {
+		if strings.HasPrefix(tld, "xn--") {
+			u, err := idna.ToUnicode(tld)
+			if err != nil {
+				log.Fatalf(`cannot encode IDNA TLD "%s" to unicode: %v`, tld, err)
+			}
+			knownTLDs[u] = true
+		}
+	}
 }
 
 func main() {
@@ -42,7 +53,7 @@ func main() {
 	}
 
 	if err := scanner.Err(); err != nil {
-		log.Println(err)
+		log.Fatal(err)
 	}
 }
 
