@@ -1,0 +1,576 @@
+{
+  "banana.com": {
+    "domains": ["banana.com"],
+    "urls": [],
+    "emails": [],
+    "ip4s": []
+  },
+  "www.banana.com": {
+    "domains": ["www.banana.com"],
+    "urls": [],
+    "emails": [],
+    "ip4s": []
+  },
+  "banana[.]com": {
+    "domains": ["banana.com"],
+    "urls": [],
+    "emails": [],
+    "ip4s": []
+  },
+  "www[.]banana[.]com": {
+    "domains": ["www.banana.com"],
+    "urls": [],
+    "emails": [],
+    "ip4s": []
+  },
+  "banana[dot]com": {
+    "domains": ["banana.com"],
+    "urls": [],
+    "emails": [],
+    "ip4s": []
+  },
+  "banana-papaya.com": {
+    "domains": ["banana-papaya.com"],
+    "urls": [],
+    "emails": [],
+    "ip4s": []
+  },
+  "http://banana.papaya.com": {
+    "domains": ["banana.papaya.com"],
+    "urls": ["http://banana.papaya.com"],
+    "emails": [],
+    "ip4s": []
+  },
+  "www[.]banana-papaya[dot]com": {
+    "domains": ["www.banana-papaya.com"],
+    "urls": [],
+    "emails": [],
+    "ip4s": []
+  },
+  "-banana.com": {
+    "domains": ["banana.com"],
+    "urls": [],
+    "emails": [],
+    "ip4s": []
+  },
+  "www.-banana.com": {
+    "domains": ["banana.com"],
+    "urls": [],
+    "emails": [],
+    "ip4s": []
+  },
+  "banana..com": {
+    "domains": [],
+    "urls": [],
+    "emails": [],
+    "ip4s": []
+  },
+  "banana.doc": {
+    "domains": [],
+    "urls": [],
+    "emails": [],
+    "ip4s": []
+  },
+  "1.1.1.1": {
+    "domains": [],
+    "urls": [],
+    "emails": [],
+    "ip4s": ["1.1.1.1"]
+  },
+  "1(.)1[.]1 dot 1": {
+    "domains": [],
+    "urls": [],
+    "emails": [],
+    "ip4s": ["1.1.1.1"]
+  },
+  "stix_import.com": {
+    "domains": ["import.com"],
+    "urls": [],
+    "emails": [],
+    "ip4s": []
+  },
+  "stix_import(.)com": {
+    "domains": ["import.com"],
+    "urls": [],
+    "emails": [],
+    "ip4s": []
+  },
+  "stix_import(dot)com": {
+    "domains": ["import.com"],
+    "urls": [],
+    "emails": [],
+    "ip4s": []
+  },
+  "stix_import dot com": {
+    "domains": ["import.com"],
+    "urls": [],
+    "emails": [],
+    "ip4s": []
+  },
+  "dll-host-update.com;dll-host-check.com;dll-host.com": {
+    "domains": ["dll-host-update.com", "dll-host-check.com", "dll-host.com"],
+    "urls": [],
+    "emails": [],
+    "ip4s": []
+  },
+  "{PHONE_NUMBER}_npki.zip": {
+    "domains": ["npki.zip"],
+    "urls": [],
+    "emails": [],
+    "ip4s": []
+  },
+  "hxxp://m.facebook.com----------------validate---step1.rickytaylk[dot]com/sign_in.html": {
+    "domains": [
+      "m.facebook.com----------------validate---step1.rickytaylk.com"
+    ],
+    "urls": [
+      "http://m.facebook.com----------------validate---step1.rickytaylk.com/sign_in.html"
+    ],
+    "emails": [],
+    "ip4s": []
+  },
+  "m.facebook.com------- ---------validate---step1.rickytaylk[dot]com": {
+    "domains": ["m.facebook.com", "validate---step1.rickytaylk.com"],
+    "urls": [],
+    "emails": [],
+    "ip4s": []
+  },
+  "www.--banana.com": {
+    "domains": ["banana.com"],
+    "urls": [],
+    "emails": [],
+    "ip4s": []
+  },
+  "bne_DNSTRWIN-LJLV2NKIOKPR1009969912_779542217.shalaghlagh.tk": {
+    "domains": ["779542217.shalaghlagh.tk"],
+    "urls": [],
+    "emails": [],
+    "ip4s": []
+  },
+  "ct...pcd...m4v...m...fxg...flac..eps...dxb...drw...dot...db3...cpi...cls...cdr...arw...ai.": {
+    "domains": [],
+    "urls": [],
+    "emails": [],
+    "ip4s": []
+  },
+  "keycodes777[dot]ru/x1/home[dot]php": {
+    "domains": ["keycodes777.ru"],
+    "urls": [],
+    "emails": [],
+    "ip4s": []
+  },
+  "York……..my": {
+    "domains": [],
+    "urls": [],
+    "emails": [],
+    "ip4s": []
+  },
+  "you....so": {
+    "domains": [],
+    "urls": [],
+    "emails": [],
+    "ip4s": []
+  },
+  "whois ________.com": {
+    "domains": [],
+    "urls": [],
+    "emails": [],
+    "ip4s": []
+  },
+  "Stratford-tc(dot)gov(dot)uk": {
+    "domains": ["stratford-tc.gov.uk"],
+    "urls": [],
+    "emails": [],
+    "ip4s": []
+  },
+  "": {
+    "domains": [],
+    "urls": [],
+    "emails": [],
+    "ip4s": []
+  },
+  "": {
+    "domains": [],
+    "urls": [],
+    "emails": [],
+    "ip4s": []
+  },
+  "": {
+    "domains": [],
+    "urls": [],
+    "emails": [],
+    "ip4s": []
+  },
+  "": {
+    "domains": [],
+    "urls": [],
+    "emails": [],
+    "ip4s": []
+  },
+  "": {
+    "domains": [],
+    "urls": [],
+    "emails": [],
+    "ip4s": []
+  },
+  "": {
+    "domains": [],
+    "urls": [],
+    "emails": [],
+    "ip4s": []
+  },
+  "": {
+    "domains": [],
+    "urls": [],
+    "emails": [],
+    "ip4s": []
+  },
+  "": {
+    "domains": [],
+    "urls": [],
+    "emails": [],
+    "ip4s": []
+  },
+  "": {
+    "domains": [],
+    "urls": [],
+    "emails": [],
+    "ip4s": []
+  },
+  "": {
+    "domains": [],
+    "urls": [],
+    "emails": [],
+    "ip4s": []
+  },
+  "": {
+    "domains": [],
+    "urls": [],
+    "emails": [],
+    "ip4s": []
+  },
+  "": {
+    "domains": [],
+    "urls": [],
+    "emails": [],
+    "ip4s": []
+  },
+  "": {
+    "domains": [],
+    "urls": [],
+    "emails": [],
+    "ip4s": []
+  },
+  "": {
+    "domains": [],
+    "urls": [],
+    "emails": [],
+    "ip4s": []
+  },
+  "": {
+    "domains": [],
+    "urls": [],
+    "emails": [],
+    "ip4s": []
+  },
+  "": {
+    "domains": [],
+    "urls": [],
+    "emails": [],
+    "ip4s": []
+  },
+  "": {
+    "domains": [],
+    "urls": [],
+    "emails": [],
+    "ip4s": []
+  },
+  "": {
+    "domains": [],
+    "urls": [],
+    "emails": [],
+    "ip4s": []
+  },
+  "": {
+    "domains": [],
+    "urls": [],
+    "emails": [],
+    "ip4s": []
+  },
+  "": {
+    "domains": [],
+    "urls": [],
+    "emails": [],
+    "ip4s": []
+  },
+  "": {
+    "domains": [],
+    "urls": [],
+    "emails": [],
+    "ip4s": []
+  },
+  "": {
+    "domains": [],
+    "urls": [],
+    "emails": [],
+    "ip4s": []
+  },
+  "": {
+    "domains": [],
+    "urls": [],
+    "emails": [],
+    "ip4s": []
+  },
+  "": {
+    "domains": [],
+    "urls": [],
+    "emails": [],
+    "ip4s": []
+  },
+  "": {
+    "domains": [],
+    "urls": [],
+    "emails": [],
+    "ip4s": []
+  },
+  "": {
+    "domains": [],
+    "urls": [],
+    "emails": [],
+    "ip4s": []
+  },
+  "": {
+    "domains": [],
+    "urls": [],
+    "emails": [],
+    "ip4s": []
+  },
+  "": {
+    "domains": [],
+    "urls": [],
+    "emails": [],
+    "ip4s": []
+  },
+  "": {
+    "domains": [],
+    "urls": [],
+    "emails": [],
+    "ip4s": []
+  },
+  "": {
+    "domains": [],
+    "urls": [],
+    "emails": [],
+    "ip4s": []
+  },
+  "": {
+    "domains": [],
+    "urls": [],
+    "emails": [],
+    "ip4s": []
+  },
+  "": {
+    "domains": [],
+    "urls": [],
+    "emails": [],
+    "ip4s": []
+  },
+  "": {
+    "domains": [],
+    "urls": [],
+    "emails": [],
+    "ip4s": []
+  },
+  "": {
+    "domains": [],
+    "urls": [],
+    "emails": [],
+    "ip4s": []
+  },
+  "": {
+    "domains": [],
+    "urls": [],
+    "emails": [],
+    "ip4s": []
+  },
+  "": {
+    "domains": [],
+    "urls": [],
+    "emails": [],
+    "ip4s": []
+  },
+  "": {
+    "domains": [],
+    "urls": [],
+    "emails": [],
+    "ip4s": []
+  },
+  "": {
+    "domains": [],
+    "urls": [],
+    "emails": [],
+    "ip4s": []
+  },
+  "": {
+    "domains": [],
+    "urls": [],
+    "emails": [],
+    "ip4s": []
+  },
+  "": {
+    "domains": [],
+    "urls": [],
+    "emails": [],
+    "ip4s": []
+  },
+  "": {
+    "domains": [],
+    "urls": [],
+    "emails": [],
+    "ip4s": []
+  },
+  "": {
+    "domains": [],
+    "urls": [],
+    "emails": [],
+    "ip4s": []
+  },
+  "": {
+    "domains": [],
+    "urls": [],
+    "emails": [],
+    "ip4s": []
+  },
+  "": {
+    "domains": [],
+    "urls": [],
+    "emails": [],
+    "ip4s": []
+  },
+  "": {
+    "domains": [],
+    "urls": [],
+    "emails": [],
+    "ip4s": []
+  },
+  "": {
+    "domains": [],
+    "urls": [],
+    "emails": [],
+    "ip4s": []
+  },
+  "": {
+    "domains": [],
+    "urls": [],
+    "emails": [],
+    "ip4s": []
+  },
+  "": {
+    "domains": [],
+    "urls": [],
+    "emails": [],
+    "ip4s": []
+  },
+  "": {
+    "domains": [],
+    "urls": [],
+    "emails": [],
+    "ip4s": []
+  },
+  "": {
+    "domains": [],
+    "urls": [],
+    "emails": [],
+    "ip4s": []
+  },
+  "": {
+    "domains": [],
+    "urls": [],
+    "emails": [],
+    "ip4s": []
+  },
+  "": {
+    "domains": [],
+    "urls": [],
+    "emails": [],
+    "ip4s": []
+  },
+  "": {
+    "domains": [],
+    "urls": [],
+    "emails": [],
+    "ip4s": []
+  },
+  "": {
+    "domains": [],
+    "urls": [],
+    "emails": [],
+    "ip4s": []
+  },
+  "": {
+    "domains": [],
+    "urls": [],
+    "emails": [],
+    "ip4s": []
+  },
+  "": {
+    "domains": [],
+    "urls": [],
+    "emails": [],
+    "ip4s": []
+  },
+  "": {
+    "domains": [],
+    "urls": [],
+    "emails": [],
+    "ip4s": []
+  },
+  "": {
+    "domains": [],
+    "urls": [],
+    "emails": [],
+    "ip4s": []
+  },
+  "": {
+    "domains": [],
+    "urls": [],
+    "emails": [],
+    "ip4s": []
+  },
+  "": {
+    "domains": [],
+    "urls": [],
+    "emails": [],
+    "ip4s": []
+  },
+  "": {
+    "domains": [],
+    "urls": [],
+    "emails": [],
+    "ip4s": []
+  },
+  "": {
+    "domains": [],
+    "urls": [],
+    "emails": [],
+    "ip4s": []
+  },
+  "": {
+    "domains": [],
+    "urls": [],
+    "emails": [],
+    "ip4s": []
+  },
+  "": {
+    "domains": [],
+    "urls": [],
+    "emails": [],
+    "ip4s": []
+  },
+  "": {
+    "domains": [],
+    "urls": [],
+    "emails": [],
+    "ip4s": []
+  }
+}
