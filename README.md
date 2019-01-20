@@ -15,7 +15,29 @@ go get -u github.com/assafmo/xioc/...
 
 ## Command line
 
+```bash
+$ lynx -dump https://unit42.paloaltonetworks.com/digital-quartermaster-scenario-demonstrated-in-attacks-against-the-mongolian-government/ | xioc
+sha256  5beb50d95c1e720143ca0004f5172cb8881d75f6c9f434ceaff59f34fa1fe378
+domain  energy.gov.mn
+email   altangadas@energy.gov.mn
+sha256  10090692ff40758a08bd66f806e0f2c831b4b9742bbf3d19c250e778de638f57
+domain  bpo.gov.mn
+email   ganbat_g@bpo.gov.mn
+sha256  44dbf05bc81d17542a656525772e0f0973b603704f213278036d8ffc999bb79a
+sha256  91ffe6fab7b33ff47b184b59356408951176c670cad3afcde79aa8464374acd3
+sha256  6f3d4fb64de9ae61776fd19a8eba3d1d828e7e26bb89ace00c7843a57c5f6e8a
+domain  masm.gov.mn
+email   bilguun@masm.gov.mn
+sha256  e88ea5eb642eaf832f8399d0337ba9eb1563862ddee68c26a74409a7384b9bb9
+domain  yahoo.com
+domain  mod.gov.mn
+email   davaa_ayush@yahoo.com
+# ...
+```
+
 ## Library
+
+[![GoDoc](https://godoc.org/github.com/assafmo/xioc/xioc?status.svg)](https://godoc.org/github.com/assafmo/xioc/xioc)
 
 ## Sources
 
