@@ -1,6 +1,6 @@
 # xioc
 
-Extract domains, ips, urls, emails, md5, sha1 and sha256 from text.
+Extract IOCs from text, including "escaped" ones like `hxxp://banana.com`, `1.1.1[.]1` and `phish at malicious dot com`.
 
 [![CircleCI](https://circleci.com/gh/assafmo/xioc.svg?style=shield&circle-token=53b168115c42a883184dd01267d549aed80c2f49)](https://circleci.com/gh/assafmo/xioc)
 [![Coverage Status](https://coveralls.io/repos/github/assafmo/xioc/badge.svg?branch=master)](https://coveralls.io/github/assafmo/xioc?branch=master)
@@ -9,11 +9,32 @@ Extract domains, ips, urls, emails, md5, sha1 and sha256 from text.
 
 ## Installation
 
-```bash
-go get -u github.com/assafmo/xioc
-```
+- Download a precompiled binary from https://github.com/assafmo/xioc/releases
+- Or... Use `go get`:
 
-## Command line
+  ```bash
+  go get -u github.com/assafmo/xioc
+  ```
+
+## Features
+
+- Extract IOCs (indicators of compromise) from an input text:
+  - IPv4
+  - IPv6
+  - Domain
+  - URL
+  - Email
+  - MD5
+  - SHA1
+  - SHA256
+- Translates some kinds of "escaping":
+  - `(dot)`, `[dot]`, `(.)`, `[.]` to `.`.
+  - `(at)`, `[at]`, `(@)`, `[@]` to `@`.
+  - `hxxp`, `hXXp`, `h__p`, `h**p` to `http`.
+- Command line interface
+- Go library
+
+## Command line usage
 
 ```bash
 $ xioc -h
@@ -39,12 +60,6 @@ sha256  5beb50d95c1e720143ca0004f5172cb8881d75f6c9f434ceaff59f34fa1fe378
 domain  energy.gov.mn
 email   altangadas@energy.gov.mn
 sha256  10090692ff40758a08bd66f806e0f2c831b4b9742bbf3d19c250e778de638f57
-domain  bpo.gov.mn
-email   ganbat_g@bpo.gov.mn
-sha256  44dbf05bc81d17542a656525772e0f0973b603704f213278036d8ffc999bb79a
-sha256  91ffe6fab7b33ff47b184b59356408951176c670cad3afcde79aa8464374acd3
-sha256  6f3d4fb64de9ae61776fd19a8eba3d1d828e7e26bb89ace00c7843a57c5f6e8a
-domain  masm.gov.mn
 # ...
 ```
 
@@ -54,18 +69,40 @@ sha256  5beb50d95c1e720143ca0004f5172cb8881d75f6c9f434ceaff59f34fa1fe378
 email   altangadas@energy.gov.mn
 sha256  10090692ff40758a08bd66f806e0f2c831b4b9742bbf3d19c250e778de638f57
 email   ganbat_g@bpo.gov.mn
-sha256  44dbf05bc81d17542a656525772e0f0973b603704f213278036d8ffc999bb79a
-sha256  91ffe6fab7b33ff47b184b59356408951176c670cad3afcde79aa8464374acd3
-sha256  6f3d4fb64de9ae61776fd19a8eba3d1d828e7e26bb89ace00c7843a57c5f6e8a
-email   bilguun@masm.gov.mn
-sha256  e88ea5eb642eaf832f8399d0337ba9eb1563862ddee68c26a74409a7384b9bb9
-email   davaa_ayush@yahoo.com
 # ...
 ```
 
-## Library
+## Library usage
 
+Full API:  
 [![GoDoc](https://godoc.org/github.com/assafmo/xioc/xioc?status.svg)](https://godoc.org/github.com/assafmo/xioc/xioc)
+
+```golang
+package main
+
+import (
+	"fmt"
+
+	"github.com/assafmo/xioc/xioc"
+)
+
+func main() {
+	input := `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+	banana.com
+	hxxp://i.robot.com/robots.txt
+	1.2.3.4
+	1.1.1[.]1
+	info at gmail dot com
+	hxxps://m.twitter[dot]com/`
+
+	fmt.Println(xioc.ExtractDomains(input)) // => [i.robot.com m.twitter.com gmail.com banana.com]
+	fmt.Println(xioc.ExtractSHA256s(input)) // => [e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855]
+	fmt.Println(xioc.ExtractMD5s(input))    // => []
+	fmt.Println(xioc.ExtractIPv4s(input))   // => [1.2.3.4 1.1.1.1]
+	fmt.Println(xioc.ExtractURLs(input))    // => [http://i.robot.com/robots.txt https://m.twitter.com/]
+	fmt.Println(xioc.ExtractEmails(input))  // => [info@gmail.com]
+}
+```
 
 ## Sources
 
