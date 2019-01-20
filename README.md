@@ -17,7 +17,7 @@ go get -u github.com/assafmo/xioc
 
 ```bash
 $ xioc -h
-Usage xioc:
+Usage of xioc:
   -o string
         Extract only specified types.
         Types must be comma seperated. E.g: xioc -o "ip4,domain,url,md5"
