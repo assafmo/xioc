@@ -10,7 +10,7 @@ Extract domains, ips, urls, emails, md5, sha1 and sha256 from text.
 ## Installation
 
 ```bash
-go get -u github.com/assafmo/xioc/...
+go get -u github.com/assafmo/xioc
 ```
 
 ## Command line

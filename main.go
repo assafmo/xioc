@@ -2,6 +2,7 @@ package main
 
 import (
 	"bufio"
+	"flag"
 	"fmt"
 	"log"
 	"os"
@@ -22,7 +23,24 @@ var functions = map[string]extractFunction{
 	"sha256": xioc.ExtractSHA256s,
 }
 
+const version = "1.0.0"
+
+var isPrintVersion bool
+
+func init() {
+	flag.BoolVar(&isPrintVersion, "v", false, "Print version and exit")
+	flag.Parse()
+}
+
 func main() {
+	// if -v flag, print version and exit
+	if isPrintVersion {
+		fmt.Printf("xioc v%s\n\n", version)
+		fmt.Println("Extract domains, ips, urls, emails, md5, sha1 and sha256 from text.")
+		fmt.Println("For more info visit https://github.com/assafmo/xioc")
+		return
+	}
+
 	fi, _ := os.Stdin.Stat()
 
 	if (fi.Mode() & os.ModeCharDevice) != 0 {
