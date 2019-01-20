@@ -139,12 +139,6 @@ func ExtractURLs(text string) []string {
 		u = strings.Replace(u, "https[:]//", "https://", -1)
 		u = strings.Replace(u, "[com]", "com", -1)
 
-		parsedURL, err := url.Parse(u)
-		if err != nil {
-			continue
-		}
-		u = parsedURL.String()
-
 		if !resultSet[u] {
 			resultSet[u] = true
 			result = append(result, u)
@@ -188,15 +182,9 @@ func ExtractDomains(text string) []string {
 			continue
 		}
 
-		if strings.ContainsAny(domain, `!#$%^&*()+=,@:/'\"[]`+"`") {
-			continue
-		}
-
-		if strings.Contains(domain, "..") {
-			continue
-		}
-
-		if strings.Contains(domain, ".-") {
+		if strings.ContainsAny(domain, `!#$%^&*()+=,@:/'\"[]`+"`") ||
+			strings.Contains(domain, "..") ||
+			strings.Contains(domain, ".-") {
 			continue
 		}
 
