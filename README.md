@@ -2,7 +2,7 @@
 
 Extract domains, ips, urls, emails, md5, sha1 and sha256 from text.
 
-[![CircleCI](https://circleci.com/gh/assafmo/xioc.svg?style=shield&circle-token=cd4f46d248b7601530558ae6559a20ff75a897ad)](https://circleci.com/gh/assafmo/xioc)
+[![CircleCI](https://circleci.com/gh/assafmo/xioc.svg?style=shield&circle-token=53b168115c42a883184dd01267d549aed80c2f49)](https://circleci.com/gh/assafmo/xioc)
 [![Coverage Status](https://coveralls.io/repos/github/assafmo/xioc/badge.svg?branch=master)](https://coveralls.io/github/assafmo/xioc?branch=master)
 [![Go Report Card](https://goreportcard.com/badge/github.com/assafmo/xioc)](https://goreportcard.com/report/github.com/assafmo/xioc)
 [![GoDoc](https://godoc.org/github.com/assafmo/xioc?status.svg)](https://godoc.org/github.com/assafmo/xioc)
