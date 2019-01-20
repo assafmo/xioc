@@ -1,59 +1,25 @@
-package main // import "github.com/assafmo/xioc"
+package xioc
 
 import (
-	"bufio"
-	"fmt"
 	"log"
 	"net"
 	"net/mail"
 	"net/url"
-	"os"
 	"regexp"
 	"strings"
 
 	"golang.org/x/net/idna"
 )
 
-type extractFunction func(text string) []string
-
-var functions = map[string]extractFunction{
-	"domain": ExtractDomains,
-	"email":  ExtractEmails,
-	"ip4":    ExtractIPv4s,
-	"ip6":    ExtractIPv6s,
-	"url":    ExtractURLs,
-	"md5":    ExtractMD5s,
-	"sha1":   ExtractSHA1s,
-	"sha256": ExtractSHA256s,
-}
-
 func init() {
-	for tld := range knownTLDs {
+	for tld := range KnownTLDs {
 		if strings.HasPrefix(tld, "xn--") {
 			u, err := idna.ToUnicode(tld)
 			if err != nil {
 				log.Fatalf(`cannot encode IDNA TLD "%s" to unicode: %v`, tld, err)
 			}
-			knownTLDs[u] = true
+			KnownTLDs[u] = true
 		}
-	}
-}
-
-func main() {
-	scanner := bufio.NewScanner(os.Stdin)
-	for scanner.Scan() {
-		text := scanner.Text()
-		for iocType, f := range functions {
-			results := f(text)
-			for _, ioc := range results {
-				fmt.Printf("%s\t%s\n", iocType, ioc)
-			}
-		}
-
-	}
-
-	if err := scanner.Err(); err != nil {
-		log.Fatal(err)
 	}
 }
 
@@ -111,7 +77,7 @@ func ExtractIPv6s(text string) []string {
 
 func hasKnownTLD(input string) bool {
 	domainParts := strings.Split(input, ".")
-	return knownTLDs[domainParts[len(domainParts)-1]]
+	return KnownTLDs[domainParts[len(domainParts)-1]]
 }
 
 var emailRegex = regexp.MustCompile(`(?i)\b\S+?` + at + `\S+?` + dot + `\S+\b`)

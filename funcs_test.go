@@ -1,4 +1,4 @@
-package main
+package xioc
 
 import (
 	"encoding/json"

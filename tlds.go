@@ -1,6 +1,7 @@
-package main
+package xioc
 
-var knownTLDs = map[string]bool{
+// KnownTLDs is a set of all known TLDs
+var KnownTLDs = map[string]bool{
 	"aaa":                      true,
 	"aarp":                     true,
 	"abarth":                   true,

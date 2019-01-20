@@ -1,7 +1,8 @@
 #!/bin/bash
 
-echo -e "package main\n" > tlds.go
-echo "var knownTLDs = map[string]bool{" >> tlds.go
+echo -e "package xioc\n" > tlds.go
+echo "// KnownTLDs is a set of all known TLDs" >> tlds.go
+echo "var KnownTLDs = map[string]bool{" >> tlds.go
 
 curl -s --compressed https://data.iana.org/TLD/tlds-alpha-by-domain.txt |
     grep -vF '#' |
