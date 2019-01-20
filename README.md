@@ -43,3 +43,4 @@ email   davaa_ayush@yahoo.com
 
 - Test email address: http://codefool.tumblr.com/post/15288874550/list-of-valid-and-invalid-email-addresses
 - Domains can start with a number: https://serverfault.com/a/638270
+- IPv6 Examples: http://www.gestioip.net/docu/ipv6_address_examples.html

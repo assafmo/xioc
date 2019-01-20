@@ -425,8 +425,8 @@
     "urls": [],
     "ip4s": []
   },
-  "email@example.co.jp": {
-    "emails": ["email@example.co.jp"],
+  "user@example.co.jp ssh user@example.co.jp": {
+    "emails": ["user@example.co.jp"],
     "domains": ["example.co.jp"],
     "urls": [],
     "ip4s": []
@@ -436,5 +436,53 @@
     "domains": ["example.com"],
     "urls": [],
     "ip4s": []
+  },
+  "firstname-lastname..example.com": {
+    "domains": ["example.com"],
+    "urls": [],
+    "ip4s": []
+  },
+  "2001:0db8:0a0b:12f0:0000:0000:0000:0001": {
+    "ip6s": ["2001:0db8:0a0b:12f0:0000:0000:0000:0001"]
+  },
+  "2001:db8:a0b:12f0::1": {
+    "ip6s": ["2001:db8:a0b:12f0::1"]
+  },
+  "2001:0db8::0001": {
+    "ip6s": ["2001:0db8::0001"]
+  },
+  "2001:db8::1 ": {
+    "ip6s": ["2001:db8::1"]
+  },
+  "2001:db8:0:0:0:0:2:1": {
+    "ip6s": ["2001:db8:0:0:0:0:2:1"]
+  },
+  "2001:db8::2:1": {
+    "ip6s": ["2001:db8::2:1"]
+  },
+  "2001:db8:0:1:1:1:1:1": {
+    "ip6s": ["2001:db8:0:1:1:1:1:1"]
+  },
+  "http://[2001:db8:a0b:12f0::1]/index.html http://[2001:db8:a0b:12f0::1]:80/index.html": {
+    "ip6s": ["2001:db8:a0b:12f0::1"],
+    "urls": [
+      "http://[2001:db8:a0b:12f0::1]/index.html",
+      "http://[2001:db8:a0b:12f0::1]:80/index.html"
+    ]
+  },
+  "[2001:db8:a0b:12f0::1]:21": {
+    "ip6s": ["2001:db8:a0b:12f0::1"]
+  },
+  "2001:db8:a0b:12f0::1/64": {
+    "ip6s": ["2001:db8:a0b:12f0::1"]
+  },
+  "2001:db8:a0b:12f0::1%eth0": {
+    "ip6s": ["2001:db8:a0b:12f0::1"]
+  },
+  "[2001:db8:a0b:12f0::1%25eth0]:21": {
+    "ip6s": ["2001:db8:a0b:12f0::1"]
+  },
+  "[2001:db8:a0b:12f0::1%eth0]:21": {
+    "ip6s": ["2001:db8:a0b:12f0::1"]
   }
 }

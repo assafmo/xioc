@@ -45,7 +45,7 @@ func TestExtractAddress(t *testing.T) {
 	defer f.Close()
 	json.NewDecoder(f).Decode(&tests)
 
-	testTypes := []string{"domains", "ip4s", "urls", "emails"}
+	testTypes := []string{"domains", "ip4s", "ip6s", "urls", "emails"}
 	for input, expectedOutputs := range tests {
 		for _, testType := range testTypes {
 			var extracted []string
@@ -53,6 +53,8 @@ func TestExtractAddress(t *testing.T) {
 				extracted = ExtractDomains(input)
 			} else if testType == "ip4s" {
 				extracted = ExtractIPv4s(input)
+			} else if testType == "ip6s" {
+				extracted = ExtractIPv6s(input)
 			} else if testType == "urls" {
 				extracted = ExtractURLs(input)
 			} else if testType == "emails" {
