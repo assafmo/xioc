@@ -6,7 +6,7 @@ import (
 	"log"
 	"os"
 
-	"github.com/assafmo/xioc"
+	"github.com/assafmo/xioc/xioc"
 )
 
 type extractFunction func(text string) []string
@@ -23,6 +23,13 @@ var functions = map[string]extractFunction{
 }
 
 func main() {
+	fi, _ := os.Stdin.Stat()
+
+	if (fi.Mode() & os.ModeCharDevice) != 0 {
+		fmt.Println("Cannot read data from stdin.")
+		os.Exit(1)
+	}
+
 	scanner := bufio.NewScanner(os.Stdin)
 	for scanner.Scan() {
 		text := scanner.Text()
