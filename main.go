@@ -6,13 +6,14 @@ import (
 	"fmt"
 	"log"
 	"os"
+	"strings"
 
 	"github.com/assafmo/xioc/xioc"
 )
 
 type extractFunction func(text string) []string
 
-var functions = map[string]extractFunction{
+var availableFunctions = map[string]extractFunction{
 	"domain": xioc.ExtractDomains,
 	"email":  xioc.ExtractEmails,
 	"ip4":    xioc.ExtractIPv4s,
@@ -23,22 +24,50 @@ var functions = map[string]extractFunction{
 	"sha256": xioc.ExtractSHA256s,
 }
 
-const version = "1.0.0"
+const version = "1.1.0"
 
-var isPrintVersion bool
+var versionFlag bool
+var onlyFlag string
 
 func init() {
-	flag.BoolVar(&isPrintVersion, "v", false, "Print version and exit")
+	flag.BoolVar(&versionFlag, "v", false, "Print version and exit")
+	flag.StringVar(&onlyFlag, "o", "", `Extract only specified types.
+Types must be comma seperated. E.g: xioc -o "ip4,domain,url,md5"
+Available types:
+	- ip4
+	- ip6
+	- domain
+	- url
+	- email
+	- md5
+	- sha1
+	- sha256`)
+
 	flag.Parse()
 }
 
 func main() {
 	// if -v flag, print version and exit
-	if isPrintVersion {
+	if versionFlag {
 		fmt.Printf("xioc v%s\n\n", version)
 		fmt.Println("Extract domains, ips, urls, emails, md5, sha1 and sha256 from text.")
 		fmt.Println("For more info visit https://github.com/assafmo/xioc")
 		return
+	}
+
+	functions := availableFunctions
+	if onlyFlag != "" {
+		functions = map[string]extractFunction{}
+
+		types := strings.Split(onlyFlag, ",")
+		for _, t := range types {
+			if f, ok := availableFunctions[t]; ok {
+				functions[t] = f
+			} else {
+				fmt.Printf(`Unknown extraction type "%s"`+"\n", t)
+				os.Exit(1)
+			}
+		}
 	}
 
 	fi, _ := os.Stdin.Stat()
