@@ -1,5 +1,9 @@
 # Changelog
 
+## v1.1.6 (Jan 21, 2019)
+
+- domain: support internationalized domain names (IDNs)
+
 ## v1.1.5 (Jan 21, 2019)
 
 - url: catch "hzzzp" and "hxxxp"
