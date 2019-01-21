@@ -24,7 +24,7 @@ var availableFunctions = map[string]extractFunction{
 	"sha256": xioc.ExtractSHA256s,
 }
 
-const version = "1.1.6"
+const version = "1.1.7"
 
 var versionFlag bool
 var onlyFlag string
@@ -78,6 +78,9 @@ func main() {
 	}
 
 	scanner := bufio.NewScanner(os.Stdin)
+	buf := make([]byte, 64*1024)     // 64KiB initial size
+	scanner.Buffer(buf, 5*1024*1024) // 5MiB max size
+
 	for scanner.Scan() {
 		text := scanner.Text()
 		for iocType, f := range functions {
