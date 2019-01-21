@@ -27,7 +27,7 @@ Extract IOCs from text, including "escaped" ones like `hxxp://banana.com`, `1.1.
   - MD5
   - SHA1
   - SHA256
-- Translates some kinds of "escaping":
+- Translate some kinds of "escaping"/"defanging" techniques:
   - `(dot)`, `[dot]`, `(.)`, `[.]` to `.`.
   - `(at)`, `[at]`, `(@)`, `[@]` to `@`.
   - `hxxp`, `hXXp`, `h__p`, `h**p` to `http`.
@@ -109,3 +109,4 @@ func main() {
 - Test email address: http://codefool.tumblr.com/post/15288874550/list-of-valid-and-invalid-email-addresses
 - Domains can start with a number: https://serverfault.com/a/638270
 - IPv6 Examples: http://www.gestioip.net/docu/ipv6_address_examples.html
+- Fang and defang IOCs: https://github.com/ioc-fang/ioc_fanger
