@@ -1,3 +1,13 @@
+# Changelog
+
+## v1.1.2 (Jan 21, 2019)
+
+- url: must contain a domain or an ip
+
+## v1.1.1 (Jan 21, 2019)
+
+- url: catch "://(space)"
+
 ## v1.1.0 (Jan 20, 2019)
 
 - -o flag: extract only selected types
