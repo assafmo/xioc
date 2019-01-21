@@ -120,7 +120,7 @@ func ExtractEmails(text string) []string {
 	return result
 }
 
-var urlRegex = regexp.MustCompile(`(?i)(h..ps?|ftp)\[?:\]?//\S+`)
+var urlRegex = regexp.MustCompile(`(?i)(h..ps?|ftp)\[?:\]?//\s?\S+`)
 
 // ExtractURLs extracts ftp and http addresses from an input string
 func ExtractURLs(text string) []string {
@@ -128,20 +128,22 @@ func ExtractURLs(text string) []string {
 
 	resultSet := map[string]bool{}
 	result := []string{}
-	for _, u := range urls {
-		u = replaceDot(u)
+	for _, url := range urls {
+		url = replaceDot(url)
 
-		u = strings.Replace(u, "hxxp", "http", -1)
-		u = strings.Replace(u, "hXXp", "http", -1)
-		u = strings.Replace(u, "h__p", "http", -1)
-		u = strings.Replace(u, "h**p", "http", -1)
-		u = strings.Replace(u, "http[:]//", "http://", -1)
-		u = strings.Replace(u, "https[:]//", "https://", -1)
-		u = strings.Replace(u, "[com]", "com", -1)
+		url = strings.Replace(url, "hxxp", "http", -1)
+		url = strings.Replace(url, "hXXp", "http", -1)
+		url = strings.Replace(url, "h__p", "http", -1)
+		url = strings.Replace(url, "h**p", "http", -1)
+		url = strings.Replace(url, "http[:]//", "http://", -1)
+		url = strings.Replace(url, "https[:]//", "https://", -1)
+		url = strings.Replace(url, ":// ", "://", -1)
+		url = strings.Replace(url, "[com]", "com", -1)
 
-		if !resultSet[u] {
-			resultSet[u] = true
-			result = append(result, u)
+
+		if !resultSet[url] {
+			resultSet[url] = true
+			result = append(result, url)
 		}
 	}
 

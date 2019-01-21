@@ -3,73 +3,85 @@
     "domains": ["banana.com"],
     "urls": [],
     "emails": [],
-    "ip4s": []
+    "ip4s": [],
+    "ip6s": []
   },
   "www.banana.com": {
     "domains": ["www.banana.com"],
     "urls": [],
     "emails": [],
-    "ip4s": []
+    "ip4s": [],
+    "ip6s": []
   },
   "banana[.]com": {
     "domains": ["banana.com"],
     "urls": [],
     "emails": [],
-    "ip4s": []
+    "ip4s": [],
+    "ip6s": []
   },
   "www[.]banana[.]com": {
     "domains": ["www.banana.com"],
     "urls": [],
     "emails": [],
-    "ip4s": []
+    "ip4s": [],
+    "ip6s": []
   },
   "banana[dot]com": {
     "domains": ["banana.com"],
     "urls": [],
     "emails": [],
-    "ip4s": []
+    "ip4s": [],
+    "ip6s": []
   },
   "banana-papaya.com": {
     "domains": ["banana-papaya.com"],
     "urls": [],
     "emails": [],
-    "ip4s": []
+    "ip4s": [],
+    "ip6s": []
   },
   "http://banana.papaya.com": {
     "domains": ["banana.papaya.com"],
     "urls": ["http://banana.papaya.com"],
     "emails": [],
-    "ip4s": []
+    "ip4s": [],
+    "ip6s": []
   },
   "www[.]banana-papaya[dot]com": {
     "domains": ["www.banana-papaya.com"],
     "urls": [],
     "emails": [],
-    "ip4s": []
+    "ip4s": [],
+    "ip6s": []
   },
   "-banana.com": {
     "domains": ["banana.com"],
     "urls": [],
     "emails": [],
-    "ip4s": []
+    "ip4s": [],
+    "ip6s": []
   },
   "www.-banana.com": {
     "domains": ["banana.com"],
     "urls": [],
     "emails": [],
-    "ip4s": []
+    "ip4s": [],
+    "ip6s": []
   },
   "banana..com": {
     "domains": [],
     "urls": [],
     "emails": [],
-    "ip4s": []
+    "ip4s": [],
+    "ip6s": []
   },
   "banana.doc": {
     "domains": [],
     "urls": [],
     "emails": [],
-    "ip4s": []
+    "ip4s": [],
+    "ip6s": []
   },
   "1.1.1.1": {
     "domains": [],
@@ -87,37 +99,43 @@
     "domains": ["import.com"],
     "urls": [],
     "emails": [],
-    "ip4s": []
+    "ip4s": [],
+    "ip6s": []
   },
   "stix_import(.)com": {
     "domains": ["import.com"],
     "urls": [],
     "emails": [],
-    "ip4s": []
+    "ip4s": [],
+    "ip6s": []
   },
   "stix_import(dot)com": {
     "domains": ["import.com"],
     "urls": [],
     "emails": [],
-    "ip4s": []
+    "ip4s": [],
+    "ip6s": []
   },
   "stix_import dot com": {
     "domains": ["import.com"],
     "urls": [],
     "emails": [],
-    "ip4s": []
+    "ip4s": [],
+    "ip6s": []
   },
   "dll-host-update.com;dll-host-check.com;dll-host.com": {
     "domains": ["dll-host-update.com", "dll-host-check.com", "dll-host.com"],
     "urls": [],
     "emails": [],
-    "ip4s": []
+    "ip4s": [],
+    "ip6s": []
   },
   "{PHONE_NUMBER}_npki.zip": {
     "domains": ["npki.zip"],
     "urls": [],
     "emails": [],
-    "ip4s": []
+    "ip4s": [],
+    "ip6s": []
   },
   "hxxp://m.facebook.com----------------validate---step1.rickytaylk[dot]com/sign_in.html": {
     "domains": [
@@ -127,67 +145,78 @@
       "http://m.facebook.com----------------validate---step1.rickytaylk.com/sign_in.html"
     ],
     "emails": [],
-    "ip4s": []
+    "ip4s": [],
+    "ip6s": []
   },
   "m.facebook.com------- ---------validate---step1.rickytaylk[dot]com": {
     "domains": ["m.facebook.com", "validate---step1.rickytaylk.com"],
     "urls": [],
     "emails": [],
-    "ip4s": []
+    "ip4s": [],
+    "ip6s": []
   },
   "www.--banana.com": {
     "domains": ["banana.com"],
     "urls": [],
     "emails": [],
-    "ip4s": []
+    "ip4s": [],
+    "ip6s": []
   },
   "bne_DNSTRWIN-LJLV2NKIOKPR1009969912_779542217.shalaghlagh.tk": {
     "domains": ["779542217.shalaghlagh.tk"],
     "urls": [],
     "emails": [],
-    "ip4s": []
+    "ip4s": [],
+    "ip6s": []
   },
   "ct...pcd...m4v...m...fxg...flac..eps...dxb...drw...dot...db3...cpi...cls...cdr...arw...ai.": {
     "domains": [],
     "urls": [],
     "emails": [],
-    "ip4s": []
+    "ip4s": [],
+    "ip6s": []
   },
   "keycodes777[dot]ru/x1/home[dot]php": {
     "domains": ["keycodes777.ru"],
     "urls": [],
     "emails": [],
-    "ip4s": []
+    "ip4s": [],
+    "ip6s": []
   },
   "York……..my": {
     "domains": [],
     "urls": [],
     "emails": [],
-    "ip4s": []
+    "ip4s": [],
+    "ip6s": []
   },
   "you....so": {
     "domains": [],
     "urls": [],
     "emails": [],
-    "ip4s": []
+    "ip4s": [],
+    "ip6s": []
   },
   "whois ________.com": {
     "domains": [],
     "urls": [],
     "emails": [],
-    "ip4s": []
+    "ip4s": [],
+    "ip6s": []
   },
   "Stratford-tc(dot)gov(dot)uk": {
     "domains": ["stratford-tc.gov.uk"],
     "urls": [],
     "emails": [],
-    "ip4s": []
+    "ip4s": [],
+    "ip6s": []
   },
   "1.1.1.1000": {
     "domains": [],
     "urls": [],
     "emails": [],
-    "ip4s": []
+    "ip4s": [],
+    "ip6s": []
   },
   "192[DOT]95[DOT]42[DOT]205": {
     "domains": [],
@@ -205,61 +234,71 @@
     "domains": [],
     "urls": [],
     "emails": [],
-    "ip4s": []
+    "ip4s": [],
+    "ip6s": []
   },
   "a..a@a.com": {
     "domains": ["a.com"],
     "urls": [],
     "emails": [],
-    "ip4s": []
+    "ip4s": [],
+    "ip6s": []
   },
   "a+a@a.com": {
     "domains": ["a.com"],
     "urls": [],
     "emails": ["a+a@a.com"],
-    "ip4s": []
+    "ip4s": [],
+    "ip6s": []
   },
   "t$……j@h.0": {
     "domains": [],
     "urls": [],
     "emails": [],
-    "ip4s": []
+    "ip4s": [],
+    "ip6s": []
   },
   "beta[at]zimperium[dot]com": {
     "domains": ["zimperium.com"],
     "urls": [],
     "emails": ["beta@zimperium.com"],
-    "ip4s": []
+    "ip4s": [],
+    "ip6s": []
   },
   "epiclesis[at]protonmail.ch": {
     "domains": ["protonmail.ch"],
     "urls": [],
     "emails": ["epiclesis@protonmail.ch"],
-    "ip4s": []
+    "ip4s": [],
+    "ip6s": []
   },
   "certbot failed at 0day[dot]rocks?": {
     "domains": ["0day.rocks"],
     "urls": [],
     "emails": ["failed@0day.rocks"],
-    "ip4s": []
+    "ip4s": [],
+    "ip6s": []
   },
   "tool!medium.com/@vysec.private…": {
     "domains": ["medium.com"],
     "urls": [],
     "emails": [],
-    "ip4s": []
+    "ip4s": [],
+    "ip6s": []
   },
   "ilya-soro*****12@mail.ru, v*****re@gmail.com,": {
     "domains": ["mail.ru", "gmail.com"],
     "urls": [],
     "emails": ["ilya-soro*****12@mail.ru", "v*****re@gmail.com"],
-    "ip4s": []
+    "ip4s": [],
+    "ip6s": []
   },
   "x0rz+stickers@0day[.]rocks)": {
     "domains": ["0day.rocks"],
     "urls": [],
     "emails": ["x0rz+stickers@0day.rocks"],
-    "ip4s": []
+    "ip4s": [],
+    "ip6s": []
   },
   "http://www.eset.eu/encyclopaedia/win32dursg-a-p2p-worm-agent-aak-w32-sillyp2p-trojan-c?lng=en": {
     "domains": ["www.eset.eu"],
@@ -267,73 +306,85 @@
       "http://www.eset.eu/encyclopaedia/win32dursg-a-p2p-worm-agent-aak-w32-sillyp2p-trojan-c?lng=en"
     ],
     "emails": [],
-    "ip4s": []
+    "ip4s": [],
+    "ip6s": []
   },
   "(http://blogs.pcmag.com/securitywatch/2010/02/sw_tests_show_prob": {
     "domains": ["blogs.pcmag.com"],
     "urls": ["http://blogs.pcmag.com/securitywatch/2010/02/sw_tests_show_prob"],
     "emails": [],
-    "ip4s": []
+    "ip4s": [],
+    "ip6s": []
   },
   "https://twitter.com/Nrg8000/status/957318498102865920": {
     "domains": ["twitter.com"],
     "urls": ["https://twitter.com/Nrg8000/status/957318498102865920"],
     "emails": [],
-    "ip4s": []
+    "ip4s": [],
+    "ip6s": []
   },
   "http://en.wikipedia.org/wiki/Lynx_%28web_browser%29": {
     "domains": ["en.wikipedia.org"],
     "urls": ["http://en.wikipedia.org/wiki/Lynx_%28web_browser%29"],
     "emails": [],
-    "ip4s": []
+    "ip4s": [],
+    "ip6s": []
   },
   "ftp://alpha[.]gnu.org/gnu/emacs/pretest/emacs-25[dot]0.90.tar.xz": {
     "domains": ["alpha.gnu.org"],
     "urls": ["ftp://alpha.gnu.org/gnu/emacs/pretest/emacs-25.0.90.tar.xz"],
     "emails": [],
-    "ip4s": []
+    "ip4s": [],
+    "ip6s": []
   },
   "hxxp://www.easy-home-sales[.]co.za//db_template.php": {
     "domains": ["www.easy-home-sales.co.za"],
     "urls": ["http://www.easy-home-sales.co.za//db_template.php"],
     "emails": [],
-    "ip4s": []
+    "ip4s": [],
+    "ip6s": []
   },
   "send email to sales AT zimperium dot com": {
     "domains": ["zimperium.com"],
     "urls": [],
     "emails": ["sales@zimperium.com"],
-    "ip4s": []
+    "ip4s": [],
+    "ip6s": []
   },
   "unicode fi => veriﬁedaccounts(dot)byethost9(dot)com/go(dot)html": {
     "domains": ["veriﬁedaccounts.byethost9.com"],
     "urls": [],
     "emails": [],
-    "ip4s": []
+    "ip4s": [],
+    "ip6s": []
   },
   "URL: big-product[DOT]info -> bigproducts[DOT]info/campaigns/rockyiphone/rockyiphone[DOT]php": {
     "domains": ["big-product.info", "bigproducts.info"],
     "urls": [],
     "emails": [],
-    "ip4s": []
+    "ip4s": [],
+    "ip6s": []
   },
   "https://www.youtube(dot)com/watch?v=r56baR7zSpU": {
     "domains": ["www.youtube.com"],
     "urls": ["https://www.youtube.com/watch?v=r56baR7zSpU"],
     "emails": [],
-    "ip4s": []
+    "ip4s": [],
+    "ip6s": []
   },
   "contact(at)malwaretech(dot)com ": {
     "domains": ["malwaretech.com"],
     "urls": [],
     "emails": ["contact@malwaretech.com"],
-    "ip4s": []
+    "ip4s": [],
+    "ip6s": []
   },
   "https://a:b@c.com/index.html": {
     "domains": ["c.com"],
     "urls": ["https://a:b@c.com/index.html"],
     "emails": [],
-    "ip4s": []
+    "ip4s": [],
+    "ip6s": []
   },
   " root@192.168(.)11.1 ": {
     "domains": [],
@@ -345,7 +396,8 @@
     "domains": ["m103.pay2earn.net"],
     "urls": ["http://m103.pay2earn.net/devices"],
     "emails": [],
-    "ip4s": []
+    "ip4s": [],
+    "ip6s": []
   },
   "http[:]//118.184.48[.]95:8000/info.vbs": {
     "domains": [],
@@ -357,37 +409,43 @@
     "domains": ["fpw.com.my"],
     "urls": ["http://fpw.com.my/zy"],
     "emails": [],
-    "ip4s": []
+    "ip4s": [],
+    "ip6s": []
   },
   "hXXp://playback.savefrom.biz/video/video1.cab": {
     "domains": ["playback.savefrom.biz", "video1.cab"],
     "urls": ["http://playback.savefrom.biz/video/video1.cab"],
     "emails": [],
-    "ip4s": []
+    "ip4s": [],
+    "ip6s": []
   },
   "email@example.com": {
     "emails": ["email@example.com"],
     "domains": ["example.com"],
     "urls": [],
-    "ip4s": []
+    "ip4s": [],
+    "ip6s": []
   },
   "firstname.lastname@example.com": {
     "emails": ["firstname.lastname@example.com"],
     "domains": ["example.com"],
     "urls": [],
-    "ip4s": []
+    "ip4s": [],
+    "ip6s": []
   },
   "email@subdomain.example.com": {
     "emails": ["email@subdomain.example.com"],
     "domains": ["subdomain.example.com"],
     "urls": [],
-    "ip4s": []
+    "ip4s": [],
+    "ip6s": []
   },
   "firstname+lastname@example.com": {
     "emails": ["firstname+lastname@example.com"],
     "domains": ["example.com"],
     "urls": [],
-    "ip4s": []
+    "ip4s": [],
+    "ip6s": []
   },
   "email@123.123.123.123": {
     "emails": ["email@123.123.123.123"],
@@ -399,48 +457,56 @@
     "emails": ["1234567890@example.com"],
     "domains": ["example.com"],
     "urls": [],
-    "ip4s": []
+    "ip4s": [],
+    "ip6s": []
   },
   "email@example-one.com": {
     "emails": ["email@example-one.com"],
     "domains": ["example-one.com"],
     "urls": [],
-    "ip4s": []
+    "ip4s": [],
+    "ip6s": []
   },
   "_______@example.com": {
     "emails": ["_______@example.com"],
     "domains": ["example.com"],
     "urls": [],
-    "ip4s": []
+    "ip4s": [],
+    "ip6s": []
   },
   "email@example.name": {
     "emails": ["email@example.name"],
     "domains": ["example.name"],
     "urls": [],
-    "ip4s": []
+    "ip4s": [],
+    "ip6s": []
   },
   "email@example.museum": {
     "emails": ["email@example.museum"],
     "domains": ["example.museum"],
     "urls": [],
-    "ip4s": []
+    "ip4s": [],
+    "ip6s": []
   },
   "user@example.co.jp ssh user@example.co.jp": {
     "emails": ["user@example.co.jp"],
     "domains": ["example.co.jp"],
     "urls": [],
-    "ip4s": []
+    "ip4s": [],
+    "ip6s": []
   },
   "firstname-lastname@example.com": {
     "emails": ["firstname-lastname@example.com"],
     "domains": ["example.com"],
     "urls": [],
-    "ip4s": []
+    "ip4s": [],
+    "ip6s": []
   },
   "firstname-lastname..example.com": {
     "domains": ["example.com"],
     "urls": [],
-    "ip4s": []
+    "ip4s": [],
+    "ip6s": []
   },
   "2001:0db8:0a0b:12f0:0000:0000:0000:0001": {
     "ip6s": ["2001:0db8:0a0b:12f0:0000:0000:0000:0001"]
@@ -484,5 +550,9 @@
   },
   "[2001:db8:a0b:12f0::1%eth0]:21": {
     "ip6s": ["2001:db8:a0b:12f0::1"]
-  }
+  },
+  "hxxp:// feeds.rapidfeeds[.]com/88604/": {
+    "urls": ["http://feeds.rapidfeeds.com/88604/"],
+    "domains": ["feeds.rapidfeeds.com"]
+  },
 }
