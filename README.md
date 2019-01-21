@@ -110,3 +110,5 @@ func main() {
 - Domains can start with a number: https://serverfault.com/a/638270
 - IPv6 Examples: http://www.gestioip.net/docu/ipv6_address_examples.html
 - Fang and defang IOCs: https://github.com/ioc-fang/ioc_fanger
+- Indicator of Compromise (De)Fanging Project: https://ioc-fang.hightower.space/
+- InQuest/python-iocextract test data: https://github.com/InQuest/python-iocextract/tree/master/test_data
