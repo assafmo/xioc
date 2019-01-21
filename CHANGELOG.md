@@ -1,5 +1,9 @@
 # Changelog
 
+## v1.1.7 (Jan 21, 2019)
+
+- increase max read buffer from 64KiB to 5MiB
+
 ## v1.1.6 (Jan 21, 2019)
 
 - domain: support internationalized domain names (IDNs)
