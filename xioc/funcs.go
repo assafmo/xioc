@@ -158,7 +158,7 @@ func ExtractURLs(text string) []string {
 
 }
 
-var domainRegex = regexp.MustCompile(`(?i)([\p{L}\p{N}][\p{L}\p{N}\-]*` + dot + `)+[a-z]{2,}`)
+var domainRegex = regexp.MustCompile(`(?i)([\p{L}\p{N}][\p{L}\p{N}\-]*` + dot + `)+\p{L}{2,}`)
 
 // ExtractDomains extracts domain names from an input string
 func ExtractDomains(text string) []string {

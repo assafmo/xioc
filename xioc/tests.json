@@ -578,5 +578,12 @@
   },
   "habcp://www15.youtube.com.silssl.com/watch.php?v=o8h2mD8b&c=SG&feature=youtu": {
     "domains": ["www15.youtube.com.silssl.com"]
+  },
+  "banana.קום": {
+    "domains": ["banana.קום"]
+  },
+  "hxxp://papaya.рф/sitemap.xml": {
+    "urls": ["http://papaya.рф/sitemap.xml"],
+    "domains": ["papaya.рф"]
   }
 }
