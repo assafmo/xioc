@@ -140,6 +140,11 @@ func ExtractURLs(text string) []string {
 		url = strings.Replace(url, ":// ", "://", -1)
 		url = strings.Replace(url, "[com]", "com", -1)
 
+		if !strings.Contains(url, ".") && // check for domain without mutual calls
+			len(ExtractIPv4s(url)) == 0 &&
+			len(ExtractIPv6s(url)) == 0 {
+			continue
+		}
 
 		if !resultSet[url] {
 			resultSet[url] = true
