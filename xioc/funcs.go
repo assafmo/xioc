@@ -120,7 +120,8 @@ func ExtractEmails(text string) []string {
 	return result
 }
 
-var urlRegex = regexp.MustCompile(`(?i)(h..ps?|ftp)\[?:\]?//\s?\S+`)
+var urlRegex = regexp.MustCompile(`(?i)(h...?ps?|ftp)\[?:\]?//\s?\S+`)
+var urlHTTPDefangRegex = regexp.MustCompile(`(?i)(hxxp|h__p|h\*\*p|hzzzp|hxxxp)`)
 
 // ExtractURLs extracts ftp and http addresses from an input string
 func ExtractURLs(text string) []string {
@@ -130,15 +131,16 @@ func ExtractURLs(text string) []string {
 	result := []string{}
 	for _, url := range urls {
 		url = replaceDot(url)
-
-		url = strings.Replace(url, "hxxp", "http", -1)
-		url = strings.Replace(url, "hXXp", "http", -1)
-		url = strings.Replace(url, "h__p", "http", -1)
-		url = strings.Replace(url, "h**p", "http", -1)
-		url = strings.Replace(url, "http[:]//", "http://", -1)
-		url = strings.Replace(url, "https[:]//", "https://", -1)
+		url = urlHTTPDefangRegex.ReplaceAllString(url, "http")
+		url = strings.Replace(url, "[:]//", "://", -1)
+		url = strings.Replace(url, "[:]//", "://", -1)
 		url = strings.Replace(url, ":// ", "://", -1)
+		url = strings.Replace(url, " ://", "://", -1)
 		url = strings.Replace(url, "[com]", "com", -1)
+
+		if !strings.HasPrefix(url, "http") && !strings.HasPrefix(url, "ftp") {
+			continue
+		}
 
 		if !strings.Contains(url, ".") && // check for domain without mutual calls
 			len(ExtractIPv4s(url)) == 0 &&

@@ -344,6 +344,13 @@
     "ip4s": [],
     "ip6s": []
   },
+  "Hxxp://www.easy-home-sales[.]co.za//db_template.php": {
+    "domains": ["www.easy-home-sales.co.za"],
+    "urls": ["http://www.easy-home-sales.co.za//db_template.php"],
+    "emails": [],
+    "ip4s": [],
+    "ip6s": []
+  },
   "send email to sales AT zimperium dot com": {
     "domains": ["zimperium.com"],
     "urls": [],
@@ -556,5 +563,20 @@
     "domains": ["feeds.rapidfeeds.com"]
   },
   "ed to enter http:// or https:// or www.). Clic": {},
-  "http://:": {}
+  "http://:": {},
+  "hzzzp://www15.youtube.com.silssl.com/watch.php?v=o8h2mD8b&c=SG&feature=youtu": {
+    "urls": [
+      "http://www15.youtube.com.silssl.com/watch.php?v=o8h2mD8b&c=SG&feature=youtu"
+    ],
+    "domains": ["www15.youtube.com.silssl.com"]
+  },
+  "HZZZP://www15.youtube.com.silssl.com/watch.php?v=o8h2mD8b&c=SG&feature=youtu": {
+    "urls": [
+      "http://www15.youtube.com.silssl.com/watch.php?v=o8h2mD8b&c=SG&feature=youtu"
+    ],
+    "domains": ["www15.youtube.com.silssl.com"]
+  },
+  "habcp://www15.youtube.com.silssl.com/watch.php?v=o8h2mD8b&c=SG&feature=youtu": {
+    "domains": ["www15.youtube.com.silssl.com"]
+  }
 }
