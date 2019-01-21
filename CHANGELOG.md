@@ -1,5 +1,10 @@
 # Changelog
 
+## v1.1.5 (Jan 21, 2019)
+
+- url: catch "hzzzp" and "hxxxp"
+- url: http is case insensitive
+
 ## v1.1.2 (Jan 21, 2019)
 
 - url: must contain a domain or an ip
