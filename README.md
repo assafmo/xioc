@@ -1,6 +1,6 @@
 # xioc
 
-Extract IOCs from text, including "escaped" ones like `hxxp://banana.com`, `1.1.1[.]1` and `phish at malicious dot com`.
+Extract indicators of compromise from text, including "escaped" ones like `hxxp://banana.com`, `1.1.1[.]1` and `phish at malicious dot com`.
 
 [![CircleCI](https://circleci.com/gh/assafmo/xioc.svg?style=shield&circle-token=53b168115c42a883184dd01267d549aed80c2f49)](https://circleci.com/gh/assafmo/xioc)
 [![Coverage Status](https://coveralls.io/repos/github/assafmo/xioc/badge.svg?branch=master)](https://coveralls.io/github/assafmo/xioc?branch=master)
