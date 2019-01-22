@@ -55,7 +55,8 @@ Usage of xioc:
 ```
 
 ```bash
-$ lynx -dump https://unit42.paloaltonetworks.com/digital-quartermaster-scenario-demonstrated-in-attacks-against-the-mongolian-government/ | xioc
+$ REPORT="https://unit42.paloaltonetworks.com/digital-quartermaster-scenario-demonstrated-in-attacks-against-the-mongolian-government/"
+$ lynx -dump "$REPORT" | xioc
 sha256  5beb50d95c1e720143ca0004f5172cb8881d75f6c9f434ceaff59f34fa1fe378
 domain  energy.gov.mn
 email   altangadas@energy.gov.mn
@@ -64,7 +65,8 @@ sha256  10090692ff40758a08bd66f806e0f2c831b4b9742bbf3d19c250e778de638f57
 ```
 
 ```bash
-$ lynx -dump https://unit42.paloaltonetworks.com/digital-quartermaster-scenario-demonstrated-in-attacks-against-the-mongolian-government/ | xioc -o email,sha256
+$ REPORT="https://unit42.paloaltonetworks.com/digital-quartermaster-scenario-demonstrated-in-attacks-against-the-mongolian-government/"
+$ lynx -dump "$REPORT" | xioc -o email,sha256
 sha256  5beb50d95c1e720143ca0004f5172cb8881d75f6c9f434ceaff59f34fa1fe378
 email   altangadas@energy.gov.mn
 sha256  10090692ff40758a08bd66f806e0f2c831b4b9742bbf3d19c250e778de638f57
