@@ -34,8 +34,8 @@ Extract indicators of compromise from text, including "escaped" ones like `hxxp:
   - SHA1
   - SHA256
 - Translate some kinds of "escaping"/"defanging" techniques:
-  - `(dot)`, `[dot]`, `(.)`, `[.]` to `.`.
-  - `(at)`, `[at]`, `(@)`, `[@]` to `@`.
+  - `(dot)`, `[dot]`, `(.)`, `[.]`, `{.}` to `.`.
+  - `(at)`, `[at]`, `(@)`, `[@]`, `{@}` to `@`.
   - `hxxp`, `hXXp`, `h__p`, `h**p` to `http`.
 - Command line interface
 - Go library
