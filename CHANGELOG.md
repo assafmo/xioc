@@ -3,7 +3,7 @@
 ## v1.1.10 (Jan 23, 2019)
 
 - de-defang `{.}` => `.`
-- `{@}` => `@`
+- de-defang `{@}` => `@`
 - allow whitespace before and after special defangs like `{.}`, `[@]`, `(at)`, etc.
 
 ## v1.1.7 (Jan 21, 2019)
