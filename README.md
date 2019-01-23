@@ -120,3 +120,4 @@ func main() {
 - Fang and defang IOCs: https://github.com/ioc-fang/ioc_fanger
 - Indicator of Compromise (De)Fanging Project: https://ioc-fang.hightower.space/
 - InQuest/python-iocextract test data: https://github.com/InQuest/python-iocextract/tree/master/test_data
+- Email address can be treated as case-insensitive: https://stackoverflow.com/a/9808332

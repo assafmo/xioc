@@ -597,5 +597,9 @@
   "aminjalali_58 (at) yahoo.com intelreports (at) kaspersky [dot] com": {
     "emails": ["aminjalali_58@yahoo.com", "intelreports@kaspersky.com"],
     "domains": ["yahoo.com", "kaspersky.com"]
+  },
+  "rEsearch@fireeye.COM": {
+    "emails": ["research@fireeye.com"],
+    "domains": ["fireeye.com"]
   }
 }
