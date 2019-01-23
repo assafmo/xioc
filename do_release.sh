@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -e
+
 # build into ./release/
 rm -rf release
 mkdir -p release
@@ -19,10 +21,10 @@ GOOS=darwin  GOARCH=amd64 go build -o "release/xioc-macos64-${VERSION}"
 
 # publish ubuntu snap
 
-rm -rf snap *.snap*
+rm -rf snap *.snap* *_source.tar.bz2
 snapcraft
 snapcraft push *.snap
 REV=$(snapcraft list-revisions xioc | head -2 | tail -1 | awk '{print $1}')
 snapcraft release xioc "$REV" stable
 snapcraft clean
-rm -rf snap *.snap*
+rm -rf snap *.snap* *_source.tar.bz2

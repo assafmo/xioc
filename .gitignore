@@ -3,3 +3,17 @@ debug.test
 .vscode
 *pdf
 release
+
+*.out
+*.pb.gz
+*.test
+*pprof*
+
+# snap
+stage
+snap
+prime
+parts
+*.snap
+*.xdelta3
+*.tar.bz2
