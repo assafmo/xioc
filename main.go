@@ -24,7 +24,7 @@ var availableFunctions = map[string]extractFunction{
 	"sha256": xioc.ExtractSHA256s,
 }
 
-const version = "1.1.7"
+const version = "1.1.10"
 
 var versionFlag bool
 var onlyFlag string
