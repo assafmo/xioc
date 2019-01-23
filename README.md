@@ -18,9 +18,9 @@ Extract indicators of compromise from text, including "escaped" ones like `hxxp:
 
 - Or... Use snap install (Ubuntu):
 
-```bash
-snap install xioc
-```
+  ```bash
+  snap install xioc
+  ```
 
 ## Features
 
