@@ -23,14 +23,14 @@ func init() {
 	}
 }
 
-var dot = `(\.| dot |\(dot\)|\[dot\]|\(\.\)|\[\.\])`
+var dot = `(\.|\p{Z}dot\p{Z}|\p{Z}?(\(dot\)|\[dot\]|\(\.\)|\[\.\]|\{\.\})\p{Z}?)`
 var dotRegex = regexp.MustCompile(`(?i)` + dot)
 
 func replaceDot(s string) string {
 	return dotRegex.ReplaceAllString(s, ".")
 }
 
-var at = `(@| at |\(at\)|\[at\]|\(@\)|\[@\])`
+var at = `(@|\p{Z}at\p{Z}|\p{Z}?(\(at\)|\[at\]|\(@\)|\[@\]|\{@\})\p{Z}?)`
 var atRegex = regexp.MustCompile(`(?i)` + at)
 
 func replaceAt(s string) string {

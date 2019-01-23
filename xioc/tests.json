@@ -585,5 +585,17 @@
   "hxxp://papaya.рф/sitemap.xml": {
     "urls": ["http://papaya.рф/sitemap.xml"],
     "domains": ["papaya.рф"]
+  },
+  "hxxps://revcode{.}eu/": {
+    "urls": ["https://revcode.eu/"],
+    "domains": ["revcode.eu"]
+  },
+  "research {@} fireeye DOT COM": {
+    "emails": ["research@fireeye.com"],
+    "domains": ["fireeye.com"]
+  },
+  "aminjalali_58 (at) yahoo.com intelreports (at) kaspersky [dot] com": {
+    "emails": ["aminjalali_58@yahoo.com", "intelreports@kaspersky.com"],
+    "domains": ["yahoo.com", "kaspersky.com"]
   }
 }
