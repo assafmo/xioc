@@ -16,6 +16,12 @@ Extract indicators of compromise from text, including "escaped" ones like `hxxp:
   go get -u github.com/assafmo/xioc
   ```
 
+- Or... Use snap install (Ubuntu):
+
+```bash
+snap install xioc
+```
+
 ## Features
 
 - Extract IOCs (indicators of compromise) from an input text:

@@ -17,3 +17,12 @@ GOOS=darwin  GOARCH=amd64 go build -o "release/xioc-macos64-${VERSION}"
     parallel --bar 'zip "$(echo "{}" | sed "s/.exe//").zip" "{}" && rm -f "{}"'
 )
 
+# publish ubuntu snap
+
+rm -rf snap *.snap*
+snapcraft
+snapcraft push *.snap
+REV=$(snapcraft list-revisions xioc | head -2 | tail -1 | awk '{print $1}')
+snapcraft release xioc "$REV" stable
+snapcraft clean
+rm -rf snap *.snap*

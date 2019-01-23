@@ -1,0 +1,19 @@
+name: xioc
+version: git
+version-script: |
+  echo $(git describe --tags $(git rev-list --tags --max-count=1))-$(git log --oneline | head -1 | awk '{print $1}')
+summary: Extract indicators of compromise from text, including "escaped" ones.
+description: |
+  Extract indicators of compromise from text, including "escaped" ones.
+grade: stable
+confinement: strict
+
+parts:
+  xioc:
+    source: .
+    plugin: go
+    go-importpath: github.com/assafmo/xioc
+
+apps:
+  xioc:
+    command: xioc
