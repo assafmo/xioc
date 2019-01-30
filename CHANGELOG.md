@@ -1,5 +1,9 @@
 # Changelog
 
+## v1.1.11 (Jan 30, 2019)
+
+- fix crash if stdin line bigger than 5MiB (issue #7)
+
 ## v1.1.10 (Jan 23, 2019)
 
 - de-defang `{.}` => `.`
