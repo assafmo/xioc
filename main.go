@@ -2,6 +2,7 @@ package main
 
 import (
 	"bufio"
+	"bytes"
 	"flag"
 	"fmt"
 	"log"
@@ -78,8 +79,9 @@ func main() {
 	}
 
 	scanner := bufio.NewScanner(os.Stdin)
-	buf := make([]byte, 64*1024)     // 64KiB initial size
-	scanner.Buffer(buf, 5*1024*1024) // 5MiB max size
+	buf := make([]byte, 64*1024)       // 64KiB initial size
+	scanner.Buffer(buf, maxLineSize+1) // 5MiB max size
+	scanner.Split(scanLinesMax5MiB)
 
 	for scanner.Scan() {
 		text := scanner.Text()
@@ -95,4 +97,35 @@ func main() {
 	if err := scanner.Err(); err != nil {
 		log.Fatal(err)
 	}
+}
+
+// dropCR drops a terminal \r from the data.
+// taken from https://golang.org/src/bufio/scan.go
+func dropCR(data []byte) []byte {
+	if len(data) > 0 && data[len(data)-1] == '\r' {
+		return data[0 : len(data)-1]
+	}
+	return data
+}
+
+var maxLineSize = 5 * 1024 * 1024
+
+// modified scanLines from https://golang.org/src/bufio/scan.go
+func scanLinesMax5MiB(data []byte, atEOF bool) (advance int, token []byte, err error) {
+	if atEOF && len(data) == 0 {
+		return 0, nil, nil
+	}
+	if i := bytes.IndexByte(data, '\n'); i >= 0 {
+		// We have a full newline-terminated line.
+		return i + 1, dropCR(data[0:i]), nil
+	}
+	if len(data) > maxLineSize {
+		return len(data), dropCR(data), nil
+	}
+	// If we're at EOF, we have a final, non-terminated line. Return it.
+	if atEOF {
+		return len(data), dropCR(data), nil
+	}
+	// Request more data.
+	return 0, nil, nil
 }
