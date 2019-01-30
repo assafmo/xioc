@@ -77,6 +77,13 @@ func main() {
 		os.Exit(1)
 	}
 
+	// test streaming search
+	// E.g: pv text.txt | go run main.go > /dev/null
+	for x := range xioc.ExtractReaderIPv4s(os.Stdin) {
+		fmt.Println(x)
+	}
+	os.Exit(0)
+
 	scanner := bufio.NewScanner(os.Stdin)
 	buf := make([]byte, 64*1024)     // 64KiB initial size
 	scanner.Buffer(buf, 5*1024*1024) // 5MiB max size
@@ -89,7 +96,6 @@ func main() {
 				fmt.Printf("%s\t%s\n", iocType, ioc)
 			}
 		}
-
 	}
 
 	if err := scanner.Err(); err != nil {

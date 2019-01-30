@@ -1,6 +1,8 @@
 package xioc
 
 import (
+	"bufio"
+	"io"
 	"log"
 	"net"
 	"net/mail"
@@ -21,6 +23,22 @@ func init() {
 			KnownTLDs[u] = true
 		}
 	}
+}
+
+func extractAllMatches(reader io.Reader, regex *regexp.Regexp) <-chan string {
+	result := make(chan string)
+	go func() {
+		defer close(result)
+		ar := &AccumReader{R: bufio.NewReader(reader)}
+		for {
+			loc := regex.FindReaderIndex(ar)
+			if loc == nil {
+				break
+			}
+			result <- ar.Slide(loc[0], loc[1])
+		}
+	}()
+	return result
 }
 
 var dot = `(\.|\p{Z}dot\p{Z}|\p{Z}?(\(dot\)|\[dot\]|\(\.\)|\[\.\]|\{\.\})\p{Z}?)`
@@ -60,6 +78,21 @@ func filterOnlyValidIPs(ips []string) []string {
 }
 
 var ip4Regex = regexp.MustCompile(`(?i)([0-9]|` + dot + `)+`)
+
+// ExtractReaderIPv4s extracts IPv4 addresses from an input string
+func ExtractReaderIPv4s(r io.Reader) <-chan string {
+	result := make(chan string)
+	go func() {
+		defer close(result)
+		for ip := range extractAllMatches(r, ip4Regex) {
+			validIPs := filterOnlyValidIPs([]string{ip})
+			if len(validIPs) == 1 {
+				result <- validIPs[0]
+			}
+		}
+	}()
+	return result
+}
 
 // ExtractIPv4s extracts IPv4 addresses from an input string
 func ExtractIPv4s(text string) []string {
