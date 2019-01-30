@@ -6,7 +6,7 @@ jobs:
   build:
     docker:
       - image: circleci/golang:latest
-    working_directory: /go/src/github.com/assafmo/joincap
+    working_directory: /go/src/github.com/assafmo/xioc
     steps:
       - checkout
       - run: go version
