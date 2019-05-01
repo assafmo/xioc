@@ -1,8 +1,14 @@
 #!/bin/bash
 
-set -e
-
 # build into ./release/
+
+set -e
+set -v
+
+go get -v -u -t -d ./...
+
+go test -race -cover ./...
+
 rm -rf release
 mkdir -p release
 
