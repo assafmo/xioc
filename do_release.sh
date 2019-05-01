@@ -20,9 +20,28 @@ GOOS=windows GOARCH=amd64 go build -o "release/xioc-win64-${VERSION}.exe"
 GOOS=darwin  GOARCH=amd64 go build -o "release/xioc-macos64-${VERSION}"
 
 (
+    # zip
     cd release
     find -type f | 
-    parallel --bar 'zip "$(echo "{}" | sed "s/.exe//").zip" "{}" && rm -f "{}"'
+        parallel --bar 'zip "$(echo "{}" | sed "s/.exe//").zip" "{}" && rm -f "{}"'
+
+    # deb
+    mkdir -p ./deb/DEBIAN
+    cat > ./deb/DEBIAN/control <<EOF 
+Package: xioc
+Architecture: amd64
+Maintainer: Assaf Morami <assaf.morami@gmail.com>
+Priority: optional
+Version: $(echo "${VERSION}" | tr -d v)
+Homepage: https://github.com/assafmo/xioc
+Description: Extract indicators of compromise from text, including "escaped" ones. 
+EOF
+
+    mkdir -p ./deb/bin
+    unzip -o -d ./deb/bin xioc-linux64-*
+    mv -f ./deb/bin/xioc-linux64-* ./deb/bin/xioc
+
+    dpkg-deb --build ./deb/ .
 )
 
 # publish ubuntu snap
