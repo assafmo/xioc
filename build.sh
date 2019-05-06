@@ -38,6 +38,7 @@ Priority: optional
 Architecture: amd64
 Maintainer: Assaf Morami <assaf.morami@gmail.com>
 Homepage: https://github.com/assafmo/xioc
+Installed-Size: $(ls -l --block-size=KB ./deb/bin/xioc | awk '{print $5}' | tr -d 'kB')
 Description: Extract indicators of compromise from text, including "escaped" ones. 
 EOF
 
