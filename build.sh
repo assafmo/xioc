@@ -26,20 +26,24 @@ GOOS=darwin  GOARCH=amd64 go build -o "release/xioc-macos64-${VERSION}"
         parallel --bar 'zip "$(echo "{}" | sed "s/.exe//").zip" "{}" && rm -f "{}"'
 
     # deb
-    mkdir -p ./deb/DEBIAN
-    cat > ./deb/DEBIAN/control <<EOF 
-Package: xioc
-Architecture: amd64
-Maintainer: Assaf Morami <assaf.morami@gmail.com>
-Priority: optional
-Version: $(echo "${VERSION}" | tr -d v)
-Homepage: https://github.com/assafmo/xioc
-Description: Extract indicators of compromise from text, including "escaped" ones. 
-EOF
-
     mkdir -p ./deb/bin
     unzip -o -d ./deb/bin xioc-linux64-*
     mv -f ./deb/bin/xioc-linux64-* ./deb/bin/xioc
+
+    mkdir -p ./deb/DEBIAN
+    cat > ./deb/DEBIAN/control <<EOF 
+Package: xioc
+Version: $(echo "${VERSION}" | tr -d v)
+Priority: optional
+Architecture: amd64
+Maintainer: Assaf Morami <assaf.morami@gmail.com>
+Homepage: https://github.com/assafmo/xioc
+Installed-Size: $(stat --printf="%s" ./deb/bin/xioc)
+Provides: xioc
+Conflicts: xioc
+Replaces: xioc
+Description: Extract indicators of compromise from text, including "escaped" ones. 
+EOF
 
     dpkg-deb --build ./deb/ .
 )
