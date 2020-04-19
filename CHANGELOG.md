@@ -1,5 +1,8 @@
 # Changelog
 
+## v1.1.12 (Apr 19, 2020)
+- update tlds.go
+
 ## v1.1.11 (Jan 30, 2019)
 
 - fix crash if stdin line bigger than 5MiB (issue #7)
