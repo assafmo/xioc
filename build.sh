@@ -41,6 +41,7 @@ Description: Extract indicators of compromise from text, including "escaped" one
 EOF
 
     dpkg-deb --build ./deb/ .
+    rm -rf ./deb/
 )
 
 # publish ubuntu snap
