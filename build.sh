@@ -5,8 +5,6 @@
 set -e
 set -v
 
-go get -v -u -t -d ./...
-
 go test -race -cover ./...
 
 rm -rf release
@@ -15,9 +13,9 @@ mkdir -p release
 VERSION=$(git describe --tags $(git rev-list --tags --max-count=1))
 
 # https://golang.org/doc/install/source#environment
-GOOS=linux   GOARCH=amd64 go build -o "release/xioc-linux64-${VERSION}"
-GOOS=windows GOARCH=amd64 go build -o "release/xioc-win64-${VERSION}.exe"
-GOOS=darwin  GOARCH=amd64 go build -o "release/xioc-macos64-${VERSION}"
+GOOS=linux   GOARCH=amd64 go build -ldflags '-s -w' -o "release/xioc-linux64-${VERSION}"
+GOOS=windows GOARCH=amd64 go build -ldflags '-s -w' -o "release/xioc-win64-${VERSION}.exe"
+GOOS=darwin  GOARCH=amd64 go build -ldflags '-s -w' -o "release/xioc-macos64-${VERSION}"
 
 (
     # zip
