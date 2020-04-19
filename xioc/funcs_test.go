@@ -75,25 +75,25 @@ func TestExtractAddress(t *testing.T) {
 
 func TestExtractHashes(t *testing.T) {
 	tests := map[string]map[string][]string{
-		"d41d8cd98f00b204e9800998ecf8427x": map[string][]string{
-			"md5s":    []string{},
-			"sha1s":   []string{},
-			"sha256s": []string{},
+		"d41d8cd98f00b204e9800998ecf8427x": {
+			"md5s":    {},
+			"sha1s":   {},
+			"sha256s": {},
 		},
-		"d41d8cd98f00b204e9800998ecf8427e": map[string][]string{
-			"md5s":    []string{"d41d8cd98f00b204e9800998ecf8427e"},
-			"sha1s":   []string{},
-			"sha256s": []string{},
+		"d41d8cd98f00b204e9800998ecf8427e": {
+			"md5s":    {"d41d8cd98f00b204e9800998ecf8427e"},
+			"sha1s":   {},
+			"sha256s": {},
 		},
-		"da39a3ee5e6b4b0d3255bfef95601890afd80709": map[string][]string{
-			"md5s":    []string{},
-			"sha1s":   []string{"da39a3ee5e6b4b0d3255bfef95601890afd80709"},
-			"sha256s": []string{},
+		"da39a3ee5e6b4b0d3255bfef95601890afd80709": {
+			"md5s":    {},
+			"sha1s":   {"da39a3ee5e6b4b0d3255bfef95601890afd80709"},
+			"sha256s": {},
 		},
-		"e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855": map[string][]string{
-			"md5s":    []string{},
-			"sha1s":   []string{},
-			"sha256s": []string{"e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"},
+		"e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855": {
+			"md5s":    {},
+			"sha1s":   {},
+			"sha256s": {"e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"},
 		},
 	}
 
